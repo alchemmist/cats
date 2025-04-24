@@ -4,7 +4,7 @@ import * as auth from "../../stores/auth";
 
 function Header() {
   return (
-    <nav>
+    <nav className={!auth.isAuthorized() && "disabled-link"}>
       <div className="main-side">
         <Link to="/">Главная</Link>
         <Link to="/favorites">Избранное</Link>
