@@ -1,21 +1,24 @@
+function getRawFavoriteIds() {
+  if (localStorage.getItem("favorites") === "") {
+    localStorage.setItem("favorites", "[]");
+  }
+  return JSON.parse(localStorage.getItem("favorites") ?? "[]");
+}
+
 export function addFavorite(id) {
-  let favorites = JSON.parse(localStorage.getItem("favorites")) ?? [];
+  let favorites = getRawFavoriteIds();
   favorites.push(id);
   localStorage.setItem("favorites", favorites);
 }
 
 export function removeFavorite(id) {
-  let favorites = JSON.parse(localStorage.getItem("favorites")) ?? [];
+  let favorites = getRawFavoriteIds();
   localStorage.setItem(
     "favorites",
     favorites.filter((elem) => elem === id),
   );
 }
 
-export function getFavoriteIds() {
-  return JSON.parse(localStorage.getItem("favorites")) ?? [];
-}
-
 export function getFavoriteCats(cats) {
-  return cats.length === 0 ? [] : getFavoriteIds().map((id) => cats[id]);
+  return cats.length === 0 ? [] : getRawFavoriteIds().map((id) => cats[id]);
 }
