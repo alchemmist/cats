@@ -2,6 +2,7 @@ import "./Login.css";
 import { useEffect, useState } from "react";
 import * as auth from "../../stores/auth";
 import { useNavigate } from "react-router";
+import Input from "../../components/input/Input";
 
 function Login() {
   const [login, setLogin] = useState("");
@@ -32,7 +33,7 @@ function Login() {
             <label htmlFor="login-input">
               Введите ваш логин, чтобы продолжить:
             </label>
-            <input
+            <Input 
               id="login-input"
               type="text"
               placeholder="Ваш логин"
