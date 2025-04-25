@@ -6,7 +6,7 @@ function Header() {
   return (
     <nav className={!auth.isAuthorized() && "disabled-link"}>
       <div className="main-side">
-        <Link to="/">Главная</Link>
+        <Link to="/main">Главная</Link>
         <Link to="/favorites">Избранное</Link>
       </div>
       <div className="profile-side">
