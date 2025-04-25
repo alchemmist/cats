@@ -12,7 +12,7 @@ function Header() {
       <div className="profile-side">
         <Link to="/profile">
           <img alt="Аватарка" src="/src/assets/user.png" />
-          {auth.isAuthorized() && "Профиль"}
+          {auth.isAuthorized() && auth.getAuthLogin()}
         </Link>
       </div>
     </nav>
