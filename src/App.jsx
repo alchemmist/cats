@@ -49,7 +49,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/main" element={<Home cats={cats} tags={tags} />} />
-        <Route path="/favorites" element={<Favorites />} />
+        <Route path="/favorites" element={<Favorites cats={cats} />} />
         <Route path="/profile" element={<Profile />} />
       </Routes>
     </BrowserRouter>

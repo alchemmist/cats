@@ -1,11 +1,11 @@
 export function addFavorite(id) {
-  let favorites = localStorage.getItem("favorites") ?? [];
+  let favorites = JSON.parse(localStorage.getItem("favorites")) ?? [];
   favorites.push(id);
   localStorage.setItem("favorites", favorites);
 }
 
 export function removeFavorite(id) {
-  let favorites = localStorage.getItem("favorites") ?? [];
+  let favorites = JSON.parse(localStorage.getItem("favorites")) ?? [];
   localStorage.setItem(
     "favorites",
     favorites.filter((elem) => elem === id),
@@ -13,5 +13,9 @@ export function removeFavorite(id) {
 }
 
 export function getFavoriteIds() {
-  return localStorage.getItem("favorites");
+  return JSON.parse(localStorage.getItem("favorites")) ?? [];
+}
+
+export function getFavoriteCats(cats) {
+  return cats.length === 0 ? [] : getFavoriteIds().map((id) => cats[id]);
 }
