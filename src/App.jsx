@@ -38,6 +38,8 @@ function App() {
     const uniqueTags = cats
       .flatMap((cat) => cat.tags)
       .filter((tag, i, arr) => arr.indexOf(tag) === i);
+    uniqueTags.unshift("-");
+
     setTags(uniqueTags);
   }, [cats]);
 

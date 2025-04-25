@@ -8,13 +8,13 @@ import CatList from "../../components/catlist/CatList";
 
 function Home({ cats, tags }) {
   const [displayCats, setDisplayCats] = useState(cats);
-  const [currentTag, setCurrentTag] = useState("");
+  const [currentTag, setCurrentTag] = useState("-");
   const [searchQuery, setSearchQuery] = useState("");
 
   const applySearchSettings = () => {
     let updatedDisplayCats = [];
     cats.map((cat, index) => {
-      if (cat.name.includes(searchQuery) && cat.tags.includes(currentTag)) {
+      if (cat.name.includes(searchQuery) && (cat.tags.includes(currentTag) || currentTag === "-")) {
         updatedDisplayCats.push(cat);
       }
     });
@@ -22,6 +22,7 @@ function Home({ cats, tags }) {
   };
 
   useEffect(applySearchSettings, [cats, currentTag, searchQuery]);
+  useEffect(applySearchSettings, []);
 
   return (
     <>
