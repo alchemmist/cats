@@ -1,12 +1,31 @@
 import "./CatCard.css";
 import * as catsDB from "../../stores/catsDB";
+import { useEffect, useState } from "react";
 
-function CatCard({ id, imageSrc, catName, tagList, isFavorite }) {
+function CatCard({
+  id,
+  imageSrc,
+  catName,
+  tagList,
+  favoriteChanged,
+  setFavoriteChanged,
+}) {
+  const [isFavorite, setIsFavorite] = useState(catsDB.isFavorite(id));
+
+  useEffect(() => {
+    setIsFavorite(catsDB.isFavorite(id));
+  }, [isFavorite]);
+
   const toggleFavorite = () => {
-    if (isFavorite) {
+    if (catsDB.isFavorite(id)) {
       catsDB.removeFavorite(id);
+      setIsFavorite(false);
     } else {
       catsDB.addFavorite(id);
+      setIsFavorite(true);
+    }
+    if (favoriteChanged !== null && setFavoriteChanged !== null) {
+      setFavoriteChanged(!favoriteChanged);
     }
   };
 

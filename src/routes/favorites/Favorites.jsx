@@ -5,11 +5,13 @@ import { getFavoriteCats } from "../../stores/catsDB";
 import "./Favorites.css";
 
 function Favorites({ cats }) {
-  const [favoriteCats, setFavoriteCats] = useState([]);
+  const [favoriteCats, setFavoriteCats] = useState(getFavoriteCats(cats));
+  const [favoriteChanged, setFavoriteChanged] = useState(false);
 
   useEffect(() => {
     setFavoriteCats(getFavoriteCats(cats));
-  }, [cats]);
+    console.log(favoriteChanged);
+  }, [cats, favoriteChanged]);
 
   return (
     <>
@@ -30,6 +32,8 @@ function Favorites({ cats }) {
                   catName={cat.name}
                   tagList={cat.tags}
                   isFavorite={true}
+                  favoriteChanged={favoriteChanged}
+                  setFavoriteChanged={setFavoriteChanged}
                 />
               );
             })}
