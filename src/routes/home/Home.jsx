@@ -14,7 +14,7 @@ function Home({ cats, tags }) {
   const applySearchSettings = () => {
     let updatedDisplayCats = [];
     cats.map((cat, index) => {
-      if (cat.name.includes(searchQuery)) {
+      if (cat.name.includes(searchQuery) && cat.tags.includes(currentTag)) {
         updatedDisplayCats.push(cat);
       }
     });
@@ -48,6 +48,8 @@ function Home({ cats, tags }) {
           {displayCats.map((item, index) => {
             return (
               <CatCard
+                key={index}
+                id={item.id}
                 imageSrc={"/src/assets/" + item.image}
                 catName={item.name}
                 tagList={item.tags}
