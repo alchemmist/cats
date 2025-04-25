@@ -11,7 +11,10 @@ function Header() {
       </div>
       <div className="profile-side">
         <Link to="/profile">
-          <img alt="Аватарка" src="/src/assets/user.png" />
+          <img
+            alt="Аватарка"
+            src={localStorage.getItem("userAvatar") || "/src/assets/user.png"}
+          />
           {auth.isAuthorized() && auth.getAuthLogin()}
         </Link>
       </div>
