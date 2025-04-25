@@ -34,7 +34,7 @@ function Login() {
               Введите ваш логин, чтобы продолжить:
             </label>
             <Input 
-              id="login-input"
+              id="login-page-input"
               type="text"
               placeholder="Ваш логин"
               onChange={(e) => setLogin(e.target.value)}

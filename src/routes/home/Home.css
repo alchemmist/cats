@@ -19,10 +19,12 @@ h1 {
   padding: 10px;
   margin-top: 1cm;
   margin-bottom: 1cm;
+  width: 80%;
 }
 
 #search-input {
-  width: 10cm;
+  width: 100%;
+  margin-right: 10px;
   padding-left: 30px;
   min-height: 40px;
   box-sizing: border-box;
@@ -30,12 +32,15 @@ h1 {
 }
 
 #search-tag {
-  width: 10cm;
+  width: 100%;
   box-sizing: border-box;
   min-height: 38px;
   max-height: 38px;
 }
 
+#search-tag .select-wrapper {
+  margin-left: 100px;
+}
 
 .cats-box {
   padding: 10px;

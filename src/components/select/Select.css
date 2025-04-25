@@ -12,6 +12,7 @@
   cursor: pointer;
   align-items: center;
   padding-right: 5px;
+  width: 100%;
 }
 
 .select {
@@ -31,4 +32,3 @@
   cursor: pointer;
   padding-left: 10px;
 }
-
