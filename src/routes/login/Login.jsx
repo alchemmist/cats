@@ -30,10 +30,10 @@ function Login() {
           <h1>Добро пожаловать на наш сайт с котиками!</h1>
           <span>Только смотреть, они такие красивые и милые!</span>
           <div className="login-input-form">
-            <label htmlFor="login-input">
+            <label htmlFor="login-page-input">
               Введите ваш логин, чтобы продолжить:
             </label>
-            <Input 
+            <Input
               id="login-page-input"
               type="text"
               placeholder="Ваш логин"

@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from "react";
+import * as auth from "./stores/auth";
 import Home from "./routes/home/Home";
 import Login from "./routes/login/Login";
 import Profile from "./routes/profile/Profile";
 import Header from "./components/header/Header";
+import React, { useState, useEffect } from "react";
 import Favorites from "./routes/favorites/Favorites";
-import { BrowserRouter, Routes, Route } from "react-router";
+import { BrowserRouter, Routes, Route, useNavigate } from "react-router";
+import AuthWrapper from "./components/authwrapper/AuthWrapper";
 
 function App() {
   const [tags, setTags] = useState([]);
@@ -48,9 +50,30 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Login />} />
-        <Route path="/main" element={<Home cats={cats} tags={tags} />} />
-        <Route path="/favorites" element={<Favorites cats={cats} />} />
-        <Route path="/profile" element={<Profile />} />
+        <Route
+          path="/main"
+          element={
+            <AuthWrapper>
+              <Home cats={cats} tags={tags} />
+            </AuthWrapper>
+          }
+        />
+        <Route
+          path="/favorites"
+          element={
+            <AuthWrapper>
+              <Favorites cats={cats} />
+            </AuthWrapper>
+          }
+        />
+        <Route
+          path="/profile"
+          element={
+            <AuthWrapper>
+              <Profile />
+            </AuthWrapper>
+          }
+        />
       </Routes>
     </BrowserRouter>
   );
