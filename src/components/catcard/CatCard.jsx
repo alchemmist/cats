@@ -36,7 +36,11 @@ function CatCard({
         <span className="cat-name">{catName}</span>
         <span className="tag-list">{tagList.slice(0, 2).join(", ")}</span>
         <button className="mark-favorite" onClick={toggleFavorite}>
-          &#x2605; {isFavorite ? "В избранном" : "В избранное"}
+          {isFavorite ? (
+            <span>&#x2605; В избранном</span>
+          ) : (
+            <span>&#9734; В избранное</span>
+          )}
         </button>
       </div>
     </>
