@@ -32,3 +32,8 @@
   cursor: pointer;
   padding-left: 10px;
 }
+
+.select:focus {
+  border: solid 1px #ff68b4;
+  outline: none;
+}
