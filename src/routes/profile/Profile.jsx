@@ -7,7 +7,7 @@ import "./Profile.css";
 function Profile() {
   const navigate = useNavigate();
   const [login, setLogin] = useState(
-    auth.isAuthorized() && auth.getAuthLogin(),
+    auth.isAuthorized() ? auth.getAuthLogin() : ""
   );
 
   const uploadPhoto = (e) => {
@@ -91,6 +91,7 @@ function Profile() {
               id="login-input"
               type="text"
               autoFocus
+              value={login}
               placeholder="Новый логин"
               onChange={(e) => setLogin(e.target.value)}
             />
