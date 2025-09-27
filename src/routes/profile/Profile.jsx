@@ -54,7 +54,7 @@ function Profile() {
   return (
     <>
       <div className="profile-box">
-        <h1>Профиль</h1>
+        <h1>Profile</h1>
         <div className="profile-card">
           <div className="photo-box">
             <img
@@ -73,7 +73,7 @@ function Profile() {
                 id="photo-label"
                 className="new-photo-button"
               >
-                Загрузить аватар
+                Upload avatar
               </label>
             </button>
 
@@ -86,7 +86,7 @@ function Profile() {
             />
           </div>
           <div className="login-box">
-            <h3>Логин:</h3>
+            <h3>Login:</h3>
             <Input
               id="login-input"
               type="text"
@@ -97,10 +97,10 @@ function Profile() {
             />
             <div className="edit-login-buttons-box">
               <button id="save-login-button" onClick={handleLogin}>
-                Сохранить
+                Save changes
               </button>
               <button id="exit-button" onClick={handleLogout}>
-                Выйти
+                Logout
               </button>
             </div>
           </div>

@@ -27,13 +27,13 @@ function Home({ cats, tags }) {
   return (
     <>
       <div className="main-box">
-        <h1>Поиск картинок</h1>
+        <h1>Search cats</h1>
         <div className="search-box">
           <Input
             id="search-input"
             type="text"
             autoFocus
-            placeholder="Поиск по названию"
+            placeholder="Search by name"
             onChange={(e) => setSearchQuery(e.target.value)}
           />
           <Select

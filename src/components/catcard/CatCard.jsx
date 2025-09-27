@@ -32,14 +32,14 @@ function CatCard({
   return (
     <>
       <div className="cat-card">
-        <img alt="Котик" src={imageSrc} />
+        <img alt="Cat" src={imageSrc} />
         <span className="cat-name">{catName}</span>
         <span className="tag-list">{tagList.slice(0, 2).join(", ")}</span>
         <button className="mark-favorite" onClick={toggleFavorite}>
           {isFavorite ? (
-            <span>&#x2605; В избранном</span>
+            <span>&#x2605; Saved</span>
           ) : (
-            <span>&#9734; В избранное</span>
+            <span>&#9734; Save</span>
           )}
         </button>
       </div>

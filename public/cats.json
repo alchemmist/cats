@@ -1,145 +1,145 @@
 [
   {
     "id": 1,
-    "name": "Котофей",
+    "name": "Kotofey",
     "tags": [
-      "Розовый",
-      "Обычный"
+      "Pink",
+      "Common"
     ],
     "image": "cat1.jpg"
   },
   {
     "id": 2,
-    "name": "Маркофей",
+    "name": "Markofey",
     "tags": [
-      "Серый",
-      "Обычный"
+      "Gray",
+      "Common"
     ],
     "image": "cat2.jpg"
   },
   {
     "id": 3,
-    "name": "Антофей",
+    "name": "Antofey",
     "tags": [
-      "Рыжий",
-      "Обычный"
+      "Ginger",
+      "Common"
     ],
     "image": "cat3.jpg"
   },
   {
     "id": 4,
-    "name": "Мурзик",
+    "name": "Murzik",
     "tags": [
-      "Белый",
-      "Обычный"
+      "White",
+      "Common"
     ],
     "image": "cat4.jpg"
   },
   {
     "id": 5,
-    "name": "Фефочка",
+    "name": "Fefochka",
     "tags": [
-      "Розовый",
-      "Редкий"
+      "Pink",
+      "Rare"
     ],
     "image": "cat5.jpg"
   },
   {
     "id": 6,
-    "name": "Лаки",
+    "name": "Lucky",
     "tags": [
-      "Серый",
-      "Редкий"
+      "Gray",
+      "Rare"
     ],
     "image": "cat6.jpg"
   },
   {
     "id": 7,
-    "name": "Барсик",
+    "name": "Barsik",
     "tags": [
-      "Рыжий",
-      "Редкий"
+      "Ginger",
+      "Rare"
     ],
     "image": "cat7.jpg"
   },
   {
     "id": 8,
-    "name": "Снежок",
+    "name": "Snezhek",
     "tags": [
-      "Белый",
-      "Редкий"
+      "White",
+      "Rare"
     ],
     "image": "cat8.jpg"
   },
   {
     "id": 9,
-    "name": "Пушок",
+    "name": "Pushok",
     "tags": [
-      "Розовый",
-      "Эпический"
+      "Pink",
+      "Epic"
     ],
     "image": "cat9.jpg"
   },
   {
     "id": 10,
-    "name": "Рыжик",
+    "name": "Ryzhyk",
     "tags": [
-      "Серый",
-      "Эпический"
+      "Gray",
+      "Epic"
     ],
     "image": "cat10.jpg"
   },
   {
     "id": 11,
-    "name": "Тима",
+    "name": "Tima",
     "tags": [
-      "Рыжий",
-      "Эпический"
+      "Ginger",
+      "Epic"
     ],
     "image": "cat11.jpg"
   },
   {
     "id": 12,
-    "name": "Лео",
+    "name": "Leo",
     "tags": [
-      "Белый",
-      "Эпический"
+      "White",
+      "Epic"
     ],
     "image": "cat12.jpg"
   },
   {
     "id": 13,
-    "name": "Гарфилд",
+    "name": "Garfield",
     "tags": [
-      "Розовый",
-      "Легендарный"
+      "Pink",
+      "Legendary"
     ],
     "image": "cat13.jpg"
   },
   {
     "id": 14,
-    "name": "Сэм",
+    "name": "Sam",
     "tags": [
-      "Серый",
-      "Легендарный"
+      "Gray",
+      "Legendary"
     ],
     "image": "cat14.jpg"
   },
   {
     "id": 15,
-    "name": "Багира",
+    "name": "Bagheera",
     "tags": [
-      "Рыжий",
-      "Легендарный"
+      "Ginger",
+      "Legendary"
     ],
     "image": "cat15.jpg"
   },
   {
     "id": 16,
-    "name": "Николь",
+    "name": "Nicole",
     "tags": [
-      "Белый",
-      "Легендарный"
+      "White",
+      "Legendary"
     ],
     "image": "cat16.jpg"
   }

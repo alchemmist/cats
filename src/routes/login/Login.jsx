@@ -27,24 +27,24 @@ function Login() {
     <>
       <div className="hbox">
         <div className="box">
-          <h1>Добро пожаловать на наш сайт с котиками!</h1>
-          <span>Только смотреть, они такие красивые и милые!</span>
+          <h1>Welome to our site with cats!</h1>
+          <span>Just look at them, they are so beautiful and cute!</span>
           <div className="login-input-form">
             <label htmlFor="login-page-input">
-              Введите ваш логин, чтобы продолжить:
+              Enter login to continue:
             </label>
             <Input
               id="login-page-input"
               type="text"
-              placeholder="Ваш логин"
+              placeholder="Login"
               onChange={(e) => setLogin(e.target.value)}
             />
           </div>
           <button id="login-button" onClick={handleLogin}>
-            Продолжить
+            Continue
           </button>
           <span className="copyright-block">
-            &copy; 2023 Сайт с котиками. Все права защищены.
+            &copy; 2025 Site with funny. All rights reserved.
           </span>
         </div>
       </div>
