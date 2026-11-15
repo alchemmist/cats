@@ -7,7 +7,9 @@ COPY package.json package-lock.json ./
 RUN npm ci
 
 COPY . .
-RUN npm run build
+RUN npm run build \
+ && mkdir -p dist/src/assets \
+ && cp -a src/assets/. dist/src/assets/
 
 FROM nginx:stable-alpine
 
